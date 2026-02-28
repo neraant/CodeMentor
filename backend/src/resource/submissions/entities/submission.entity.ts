@@ -1,4 +1,7 @@
-import { Assignment } from '../../assignments/entities/assignment.entity';
+import {
+  Assignment,
+  ProgrammingLanguage,
+} from '../../assignments/entities/assignment.entity';
 import {
   Column,
   CreateDateColumn,
@@ -9,8 +12,13 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
-import { SubmissionStatus } from '@/common/types/submission.type';
-import { ProgrammingLanguage } from '@/common/types/assignment.type';
+
+export enum SubmissionStatus {
+  PENDING = 'pending',
+  IN_REVIEW = 'in_review',
+  CHANGES_REQUESTED = 'changes_requested',
+  APPROVED = 'approved',
+}
 
 @Entity('submissions')
 @Index(['assignmentId', 'studentId'])

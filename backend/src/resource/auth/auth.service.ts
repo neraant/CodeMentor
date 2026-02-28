@@ -4,13 +4,12 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
-import { User } from '../users/entities/user.entity';
+import { User, UserRole } from '../users/entities/user.entity';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import { RedisService } from '../redis/redis.service';
 import { JwtPayload } from '@/common/types/jwt-payload.type';
-import { UserRole } from '@/common/types/user.type';
 import { blacklistKey, refreshKey } from '@/common/utils/jwt.util';
 
 @Injectable()

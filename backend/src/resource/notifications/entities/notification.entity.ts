@@ -8,7 +8,12 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
-import { NotificationType } from '@/common/types/notification.type';
+
+export enum NotificationType {
+  NEW_COMMENT = 'new_comment',
+  STATUS_CHANGED = 'status_changed',
+  NEW_SUBMISSION = 'new_submission',
+}
 
 @Entity('notifications')
 @Index(['userId', 'isRead'])

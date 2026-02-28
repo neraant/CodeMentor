@@ -9,7 +9,14 @@ import {
 } from 'typeorm';
 import { Group } from '../../groups/entities/group.entity';
 import { User } from '../../users/entities/user.entity';
-import { ProgrammingLanguage } from '@/common/types/assignment.type';
+
+export enum ProgrammingLanguage {
+  PYTHON = 'python',
+  JAVASCRIPT = 'javascript',
+  JAVA = 'java',
+  CPP = 'cpp',
+  TYPESCRIPT = 'typescript',
+}
 
 @Entity('assignments')
 export class Assignment {

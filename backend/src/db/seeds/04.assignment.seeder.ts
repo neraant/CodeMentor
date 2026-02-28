@@ -1,7 +1,9 @@
 import { Seeder, SeederFactoryManager } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
-import { Assignment } from '@/resource/assignments/entities/assignment.entity';
-import { ProgrammingLanguage } from '@/common/types/assignment.type';
+import {
+  Assignment,
+  ProgrammingLanguage,
+} from '@/resource/assignments/entities/assignment.entity';
 
 export default class AssignmentSeeder implements Seeder {
   public async run(

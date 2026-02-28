@@ -1,8 +1,10 @@
 import { Seeder, SeederFactoryManager } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
-import { Submission } from '@/resource/submissions/entities/submission.entity';
-import { SubmissionStatus } from '@/common/types/submission.type';
-import { ProgrammingLanguage } from '@/common/types/assignment.type';
+import {
+  Submission,
+  SubmissionStatus,
+} from '@/resource/submissions/entities/submission.entity';
+import { ProgrammingLanguage } from '@/resource/assignments/entities/assignment.entity';
 
 export default class SubmissionSeeder implements Seeder {
   public async run(

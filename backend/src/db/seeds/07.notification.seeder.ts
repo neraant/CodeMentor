@@ -1,7 +1,9 @@
 import { Seeder, SeederFactoryManager } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
-import { Notification } from '@/resource/notifications/entities/notification.entity';
-import { NotificationType } from '@/common/types/notification.type';
+import {
+  Notification,
+  NotificationType,
+} from '@/resource/notifications/entities/notification.entity';
 
 export default class NotificationSeeder implements Seeder {
   public async run(

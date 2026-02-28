@@ -1,4 +1,3 @@
-import { UserRole } from '@/common/types/user.type';
 import {
   Column,
   CreateDateColumn,
@@ -6,6 +5,11 @@ import {
   Index,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+
+export enum UserRole {
+  STUDENT = 'student',
+  MENTOR = 'mentor',
+}
 
 @Entity('users')
 export class User {

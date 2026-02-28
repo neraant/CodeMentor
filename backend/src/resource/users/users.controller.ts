@@ -1,9 +1,8 @@
 import { Controller, Get, Param, ParseUUIDPipe } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { User } from './entities/user.entity';
+import { User, UserRole } from './entities/user.entity';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { Roles } from '@/common/decorators/roles.decorator';
-import { UserRole } from '@/common/types/user.type';
 
 @ApiBearerAuth()
 @ApiTags('Users')
