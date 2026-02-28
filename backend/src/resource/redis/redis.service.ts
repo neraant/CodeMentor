@@ -10,8 +10,8 @@ export class RedisService {
     this.client = new Redis({
       host: this.configService.get<string>('REDIS_HOST'),
       port: this.configService.get<number>('REDIS_PORT'),
-      password: this.configService.get<string>('REDIS_PASSWORD') ?? '',
-      tls: {},
+      password: this.configService.get<string>('REDIS_PASSWORD') || undefined,
+      tls: this.configService.get('NODE_ENV') === 'production' ? {} : undefined,
     });
   }
 
